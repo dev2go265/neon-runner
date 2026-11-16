@@ -1,0 +1,62 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
+body {
+  background: #050510;
+  color: #e8f6ff;
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  display: flex; justify-content: center; align-items: center;
+  min-height: 100vh; padding: 12px;
+}
+.wrap { width: 100%; max-width: 980px; text-align: center; }
+.title {
+  font-size: clamp(28px, 5vw, 46px); letter-spacing: 6px; font-weight: 800;
+  color: #0ff; text-shadow: 0 0 12px #0ff, 0 0 32px #0ff, 0 0 64px #08f;
+  margin-bottom: 10px;
+}
+.title span { color: #f0f; text-shadow: 0 0 12px #f0f, 0 0 32px #f0f, 0 0 64px #a0f; }
+.game-box {
+  position: relative; width: 100%; aspect-ratio: 16 / 9;
+  border: 2px solid #0ff; border-radius: 12px; overflow: hidden;
+  box-shadow: 0 0 24px rgba(0,255,255,.35), inset 0 0 40px rgba(0,255,255,.08);
+  background: #070718;
+}
+canvas { display: block; width: 100%; height: 100%; touch-action: none; }
+.hud {
+  position: absolute; top: 0; left: 0; right: 0;
+  display: flex; justify-content: space-between; padding: 10px 14px;
+  font-size: clamp(16px, 2.6vw, 24px); font-weight: 700; pointer-events: none;
+  text-shadow: 0 0 8px #0ff;
+}
+.hud-sub { font-size: .62em; opacity: .8; margin-left: 10px; font-weight: 500; }
+.hidden { display: none !important; }
+.overlay {
+  position: absolute; inset: 0; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 10px;
+  background: rgba(3, 3, 16, .72); padding: 16px; text-align: center;
+}
+.overlay h2 {
+  font-size: clamp(24px, 4.5vw, 40px); letter-spacing: 4px; color: #0ff;
+  text-shadow: 0 0 14px #0ff;
+}
+.overlay p { font-size: clamp(13px, 2.2vw, 17px); line-height: 1.55; color: #cfefff; max-width: 560px; }
+.overlay .big { font-size: clamp(18px, 3vw, 24px); font-weight: 700; color: #ffe45e; text-shadow: 0 0 10px #fa0; }
+.btn {
+  font: inherit; font-size: clamp(15px, 2.4vw, 19px); font-weight: 700; letter-spacing: 2px;
+  color: #041018; background: #0ff; border: none; border-radius: 999px;
+  padding: 12px 30px; cursor: pointer; margin-top: 6px;
+  box-shadow: 0 0 18px rgba(0,255,255,.7);
+}
+.btn:hover { background: #7fffff; }
+.btn.alt { background: #f0f; color: #14001a; box-shadow: 0 0 18px rgba(255,0,255,.7); }
+.btn.alt:hover { background: #ff7fff; }
+.settings { display: flex; flex-wrap: wrap; gap: 14px 22px; justify-content: center; margin-top: 4px; }
+.settings .set { font-size: clamp(13px, 2vw, 16px); }
+.settings .set b { color: #ffe45e; }
+.setbtn {
+  font: inherit; font-size: .9em; font-weight: 700; color: #0ff;
+  background: transparent; border: 1px solid #0ff; border-radius: 8px;
+  padding: 4px 10px; margin-left: 4px; cursor: pointer;
+}
+.setbtn.on { background: #0ff; color: #041018; }
+.controls { font-size: clamp(12px, 2vw, 15px); opacity: .9; }
+.hint { margin-top: 10px; font-size: clamp(12px, 2vw, 15px); color: #9fd8ef; }

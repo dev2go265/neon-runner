@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Neon Runner</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <h1 class="title">NEON <span>RUNNER</span></h1>
+  <div class="game-box">
+    <canvas id="game" width="960" height="540"></canvas>
+    <div id="hud" class="hud hidden">
+      <div class="hud-left"><span id="hud-dist">0 m</span><span id="hud-score" class="hud-sub">+0 bonus</span><span id="hud-speed" class="hud-sub">0 m/s</span></div>
+      <div class="hud-right"><span id="hud-lives">♥♥♥</span><span id="hud-best" class="hud-sub">Best 0 m</span></div>
+    </div>
+    <div id="overlay" class="overlay"></div>
+  </div>
+  <p class="hint">Space / ↑ / tap to jump &nbsp;·&nbsp; ↓ to duck &nbsp;·&nbsp; P pause &nbsp;·&nbsp; M mute</p>
+</div>
+<script src="game.js"></script>
+</body>
+</html>
